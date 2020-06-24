@@ -89,6 +89,28 @@ Fraction& Fraction::operator-=(const Fraction& other) {
   return *this;
 }
 
+Fraction Fraction::operator+(const int &other) const {
+  Fraction otherF(other, 1);
+  Fraction result = *this + otherF;
+  return result;
+}
+Fraction Fraction::operator-(const int& other) const {
+  Fraction otherF(other, 1);
+  Fraction result = *this - otherF;
+  return result;
+}
+
+Fraction& Fraction::operator+=(const int& other) {
+  Fraction otherF(other, 1);
+  *this += otherF;
+  return *this;
+}
+Fraction& Fraction::operator-=(const int& other) {
+  Fraction otherF(other, 1);
+  *this -= otherF;
+  return *this;
+}
+
 Fraction& Fraction::operator*=(const Fraction& other) {
   *this = *this * other;
   return *this;
@@ -105,6 +127,28 @@ Fraction& Fraction::operator*=(const int& other) {
 Fraction& Fraction::operator/=(const int& other) {
   *this = *this / other;
   return *this;
+}
+
+Fraction& Fraction::operator++() {
+  *this += 1;
+  return *this;
+}
+
+Fraction& Fraction::operator--() {
+  *this -= 1;
+  return *this;
+}
+
+Fraction Fraction::operator++(int) {
+  Fraction result(*this);
+  ++(*this);
+  return result;
+}
+
+Fraction Fraction::operator--(int) {
+  Fraction result(*this);
+  --(*this);
+  return result;
 }
 
 Fraction::operator int() const {

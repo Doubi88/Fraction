@@ -50,4 +50,7 @@ int main(int argc, char **argv) {
   Fraction f4 = f1;
   f1 += f2;
   cout << f4 << " += " << f2 << " -> " << f1.reduce() << ", " << f2 << endl;
+
+  cout << f4 << "++ = " << f4++ << " -> " << f4 << endl;
+
 }
