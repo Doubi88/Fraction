@@ -34,9 +34,9 @@ int main(int argc, char **argv) {
   Fraction f2(3, 10);
 
   Fraction f3 = f1 + f2;
-  cout << f1 << "+" << f2 << "=" << f3 << "=" << f3.shorten() << endl;
+  cout << f1 << "+" << f2 << "=" << f3 << "=" << f3.reduce() << endl;
 
-  f3 = f3.shorten() * 3;
+  f3 = f3.reduce() * 3;
   cout << "(int)" << f3 << "=" << (int)f3 << endl;
   cout << "(double)" << f3 << "=" << (double)f3 << endl;
 
@@ -45,9 +45,9 @@ int main(int argc, char **argv) {
   cout << "(int)" << f3 << "=" << (int)f3 << endl;
   cout << "(double)" << f3 << "=" << (double)f3 << endl;
 
-  cout << "(" << f1 << ")/(" << f2 << ")=" << (f1 / f2).shorten() << endl;
+  cout << "(" << f1 << ")/(" << f2 << ")=" << (f1 / f2).reduce() << endl;
 
   Fraction f4 = f1;
   f1 += f2;
-  cout << f4 << " += " << f2 << " -> " << f1.shorten() << ", " << f2 << endl;
+  cout << f4 << " += " << f2 << " -> " << f1.reduce() << ", " << f2 << endl;
 }

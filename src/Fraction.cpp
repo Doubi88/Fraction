@@ -115,7 +115,7 @@ Fraction::operator double() const {
   return (double)numerator / (double)denominator;
 }
 
-Fraction Fraction::shorten() const {
+Fraction Fraction::reduce() const {
   int lcd = calcGreatestCommonDivisor(numerator, denominator);
   Fraction result(numerator / lcd, denominator / lcd);
   return result;

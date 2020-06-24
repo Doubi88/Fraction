@@ -60,7 +60,7 @@ public:
   operator int() const;
   operator double() const;
 
-  Fraction shorten() const;
+  Fraction reduce() const;
 
   int getDenominator() const;
   int getNumerator() const;
