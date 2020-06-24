@@ -80,6 +80,33 @@ Fraction Fraction::operator-(Fraction other) const {
   return result;
 }
 
+Fraction& Fraction::operator+=(const Fraction& other) {
+  *this = *this + other;
+  return *this;
+}
+Fraction& Fraction::operator-=(const Fraction& other) {
+  *this = *this - other;
+  return *this;
+}
+
+Fraction& Fraction::operator*=(const Fraction& other) {
+  *this = *this * other;
+  return *this;
+}
+Fraction& Fraction::operator/=(const Fraction& other) {
+  *this = *this / other;
+  return *this;
+}
+
+Fraction& Fraction::operator*=(const int& other) {
+  *this = *this * other;
+  return *this;
+}
+Fraction& Fraction::operator/=(const int& other) {
+  *this = *this / other;
+  return *this;
+}
+
 Fraction::operator int() const {
   return numerator / denominator;
 }
