@@ -46,4 +46,8 @@ int main(int argc, char **argv) {
   cout << "(double)" << f3 << "=" << (double)f3 << endl;
 
   cout << "(" << f1 << ")/(" << f2 << ")=" << (f1 / f2).shorten() << endl;
+
+  Fraction f4 = f1;
+  f1 += f2;
+  cout << f4 << " += " << f2 << " -> " << f1.shorten() << ", " << f2 << endl;
 }

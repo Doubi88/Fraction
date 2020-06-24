@@ -35,9 +35,9 @@ private:
 public:
   Fraction(int numerator, int denominator);
   virtual ~Fraction();
-  Fraction(const Fraction &other);
+  Fraction(const Fraction& other);
   
-  Fraction& operator=(const Fraction &other);
+  Fraction& operator=(const Fraction& other);
 
   Fraction operator*(const Fraction& other) const;
   Fraction operator/(const Fraction& other) const;
@@ -47,6 +47,15 @@ public:
 
   Fraction operator+(Fraction other) const;
   Fraction operator-(Fraction other) const;
+
+  Fraction& operator+=(const Fraction& other);
+  Fraction& operator-=(const Fraction& other);
+
+  Fraction& operator*=(const Fraction& other);
+  Fraction& operator/=(const Fraction& other);
+
+  Fraction& operator*=(const int& other);
+  Fraction& operator/=(const int& other);
 
   operator int() const;
   operator double() const;
