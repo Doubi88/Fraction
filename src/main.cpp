@@ -35,6 +35,12 @@
 
 using namespace std;
 
+/**
+ * @brief Describes example usages of Fracion
+ * @param argc Not used
+ * @param argv Not used
+ * @return 0
+ */
 int main(int argc, char **argv) {
   Fraction f1(3, 9);
   Fraction f2(3, 10);
@@ -59,4 +65,5 @@ int main(int argc, char **argv) {
 
   cout << f4 << "++ = " << f4++ << " -> " << f4 << endl;
 
+  return 0;
 }
