@@ -1,4 +1,4 @@
-![GitHub](https://img.shields.io/github/license/Doubi88/Fraction?style=plastic)
+[![GitHub](https://img.shields.io/github/license/Doubi88/Fraction?style=plastic)](LICENSE)
 # Fraction
 A simple C++ implementation of fractions
 
